@@ -26,8 +26,8 @@ RUN apt-get update \
 # This will unpack the war and remove any sample data
 # 
 RUN cd $CATALINA_HOME/webapps \
-    && mkdir ROOT \
-    && cd ROOT \
+    && mkdir geonetwork \
+    && cd geonetwork \
     && wget --progress=bar:force:noscroll https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v$GEONETWORK_VERSION/geonetwork.war \
     && unzip -q geonetwork.war \
     && rm geonetwork.war \
